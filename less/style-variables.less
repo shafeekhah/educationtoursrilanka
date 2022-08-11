@@ -1,0 +1,208 @@
+// @file: theme-variables.less
+// Add custom variables for use in theme.less
+
+/** Helper classes **/
+.icon-reset {
+    display: inline;
+    color: #4f4f4f;
+    font-size: 14px;
+    font-family: "FontAwesome";
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.form-control {
+    height: 48px;
+    padding: 15px;
+    border: solid 1px #dfdfdf;
+    font-size: 12px;
+    .border-radius(4px);
+    box-shadow: none;
+    &:hover, &:focus {
+        border-color: #edecec;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.custom-select {
+    height: 48px;
+    padding: 15px;
+    border: solid 1px #dfdfdf;
+    font-size: 12px;
+    .border-radius(4px);
+    &:hover, &:focus {
+        border-color: #edecec;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: @brand-primary;
+    background: @brand-primary;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(41, 162, 38, 0.25);
+}
+
+textarea {
+    height: auto !important;
+}
+.position-ab {
+	position: absolute;
+}
+.position-re {
+    position: relative;
+}
+.txt-dec-n {
+    text-decoration: @text-decoration;
+}
+.clear-right {
+    clear: right;
+}
+
+.list-ul {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+.list-style {
+    li {
+        list-style: none;
+    }
+}
+/** Helper classes **/
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+@text-color: #75706b;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg: #fff;
+
+//== Typography
+//
+@font-size-base: 14px;
+@font-weight-base: 400;
+@line-height-base: 1.714; // 24/14
+@font-family-open-sans: "Open Sans", sans-serif, Helvetica, Arial;
+@font-family-raleway: "Raleway", sans-serif, Helvetica, Arial;
+
+@font-size-h1: floor((@font-size-base * 2.667)); // ~40px
+@font-size-h2: floor((@font-size-base * 2.000)); // ~30px
+@font-size-h3: ceil((@font-size-base * 1.667)); //  ~25px
+@font-size-h4: ceil((@font-size-base * 1.467)); //  ~22px
+@font-size-h5: ceil((@font-size-base * 1.200)); //  ~18px
+@font-size-h6: ceil((@font-size-base * 1.133)); //  ~17px
+
+
+@brand-primary: #29a226;
+@brand-primary-2: #242824;
+@headings-font-weight: 400;
+@headings-color: @brand-primary;
+@text-decoration:none;
+@clear-right: right;
+
+
+//** Global
+@link-color: @brand-primary;
+@link-hover-color: @link-color;
+@text-decoration-none: none;
+@link-decoration-underline: underline;
+@link-outline-none: none;
+
+
+//* form control
+@input-border-radius: 0;
+@box-shadow: none;
+
+//== Breadcrumbs
+//
+//##
+@breadcrumb-padding-vertical: 12px;
+@breadcrumb-padding-horizontal: 0;
+//** Breadcrumb background color
+@breadcrumb-bg: transparent;
+//** Breadcrumb text color
+@breadcrumb-color: #000;
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color: #000;
+//** Textual separator for between breadcrumb elements
+@breadcrumb-separator: ">";
+
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+a {
+    outline: @link-outline-none;
+    color: @text-color;
+    text-decoration: @text-decoration-none;
+}
+a:focus, a:hover {
+    color: @link-hover-color;
+}
+a:link, a:visited {
+    outline: @link-outline-none;
+    text-decoration: @text-decoration-none;
+}
+a:active, a:focus, a:hover {
+    color: @link-hover-color;
+    text-decoration: @link-decoration-underline;
+}
+
+.box-shadow (@box-shadow:0px 4px 10px 0px rgba(51,51,51,.50)) {
+	box-shadow:@box-shadow;
+	-moz-box-shadow:@box-shadow;
+	-webkit-box-shadow:@box-shadow;
+	-o-box-shadow:@box-shadow;
+	-ms-box-shadow:@box-shadow;
+}
+
+.transitions (@transitions:all .5s ease-in-out) {
+    transition:@transitions;
+    -moz-transition:@transitions;
+    -webkit-transition:@transitions;
+    -o-transition:@transitions;
+    -ms-transition:@transitions;
+}
+
+.transforms (@transforms:translateX(-75%)) {
+    transform:@transforms;
+    -moz-transform:@transforms;
+    -webkit-transform:@transforms;
+    -o-transform:@transforms;
+    -ms-transform:@transforms;
+}
+
+.border-radius (@border-radius:30px) {
+  border-radius: @border-radius;
+  -moz-border-radius: @border-radius;
+  -webkit-border-radius: @border-radius;
+  -o-border-radius: @border-radius;
+  -ms-border-radius: @border-radius;
+}
